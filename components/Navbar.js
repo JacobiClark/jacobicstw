@@ -16,9 +16,6 @@ export default function Navbar() {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
   };
-  const switchShowNav = () => {
-    setShowNav(!showNav);
-  };
 
   return (
     <Fragment>
@@ -44,23 +41,18 @@ export default function Navbar() {
           </IconContext.Provider>
         </div>
         <div className="flex items-center justify-between">
-          <button onClick={switchTheme} type="button" className="mx-5">
-            <span className="text-2xl text-gray-600 dark:text-orange-500 hover:scale-125">
+          <button
+            onClick={switchTheme}
+            type="button"
+            className="mx-5 hover:scale-125"
+          >
+            <span className="text-2xl text-gray-600 dark:text-orange-500">
               {theme === "light" ? <FaRegMoon /> : <HiOutlineSun />}
             </span>
           </button>
           <button className=" md:visible relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900">
             <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
               Resume
-            </span>
-          </button>
-          <button
-            onClick={switchTheme}
-            type="button"
-            className="mx-5 md:hidden"
-          >
-            <span className="text-gray-600 dark:text-orange-500 hover:scale-125">
-              {<CgMenuRightAlt />}
             </span>
           </button>
         </div>
