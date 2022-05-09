@@ -49,12 +49,18 @@ export default function Navbar() {
             <span className="text-2xl text-gray-600 dark:text-orange-500">
               {theme === "light" ? <FaRegMoon /> : <HiOutlineSun />}
             </span>
-          </button>
-          <button className=" md:visible relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900">
-            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-              Resume
-            </span>
-          </button>
+          </button>{" "}
+          <a
+            href="./Jacob_Clark_CS_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className=" md:visible relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900">
+              <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Resume
+              </span>
+            </button>
+          </a>
         </div>
       </header>
       {showNav && <div className="h-56 bg-pink-400 w-100"></div>}
