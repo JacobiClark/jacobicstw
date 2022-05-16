@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <Fragment>
-      <header className="flex items-center justify-between w-full px-8 py-4">
+      <header className="flex items-center justify-between w-full px-8 py-4 max-w-7xl">
         <Link href="/" passHref={true}>
           <a>
             <h1 className="text-2xl hover:scale-125">{"{JC}"}</h1>

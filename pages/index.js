@@ -1,13 +1,31 @@
 import { Fragment } from "react";
+import Typewriter from "typewriter-effect";
+
+new Typewriter("#typewriter", {
+  strings: ["Hello", "World"],
+  autoStart: true,
+});
 
 export default function Home() {
   return (
     <Fragment>
-      <section className="flex flex-col items-center content-center h-full p-5 w-6xl">
-        <div className="w-full max-w-6xl mx-5 mt-3">
-          <h1 className="mb-2 text-5xl font-medium text-blue-400 transition transition-colors duration-1000 dark:text-yellow-300">
+      <section className="flex flex-col justify-between h-full p-5 w-6xl">
+        <div className="w-full max-w-6xl mx-5 mt-3 h-1/6 ">
+          <h1
+            id="typewriter"
+            className="mb-2 font-medium text-blue-400 transition transition-colors duration-1000 text-7xl dark:text-yellow-300"
+          >
+            {" "}
+            <Typewriter
+              options={{
+                strings: ["Hello", "World"],
+                autoStart: true,
+                loop: false,
+              }}
+            />
             Hello, I&apos;m Jacob Clark
           </h1>
+          <p></p>
         </div>
         <div className="w-full max-w-6xl mx-5 mt-3">
           <p className="mb-2 text-2xl transition transition-colors duration-1000 text-slate-800 text-md dark:text-gray-50">
